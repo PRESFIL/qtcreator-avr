@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+##########################################################################
+# "THE ANY BEVERAGE-WARE LICENSE" (Revision 42 - based on beer-ware
+# license):
+# <jakub@skorepa.info> wrote this file. As long as you retain this notice
+# you can do whatever you want with this stuff. If we meet some day, and
+# you think this stuff is worth it, you can buy me a be(ve)er(age) in
+# return. (I don't like beer much.)
+#
+# Jakub Skořepa
+##########################################################################
+-->
+<wizard version="1" kind="project"
+        class=""
+        firstpage="10"
+        id="A.AVR" category="B.AVR"
+        featuresRequired="Plugin.CMakeProjectManager">
+    <icon>avr.png</icon>
+    <displayname>AVR project</displayname>
+    <displayname xml:lang="ru">AVR проект</displayname>
+    <displaycategory>AVR</displaycategory>
+    <description>Creates a plain C++ project for AVR.</description>
+    <description xml:lang="ru">Создает простой проект C++ для AVR.</description>
+    <files>
+    	<file source="src/main.cpp" openeditor="true" target=""/>
+        <file source="CMakeLists.txt" openproject="true"/>
+    </files>
+    <fieldpagetitle xml:lang="en">AVR Parameters</fieldpagetitle>
+    <fieldpagetitle xml:lang="ru">Параметры AVR</fieldpagetitle>
+    <fieldpagetitle xml:lang="cs">Parametry AVR</fieldpagetitle>
+    <fields>
+        <field name="MCU" mandatory="false">
+            <fielddescription xml:lang="en">MCU:</fielddescription>
+            <fielddescription xml:lang="ru">Микроконтроллер:</fielddescription>
+            <fieldcontrol class="QComboBox" defaultindex="0">
+                <comboentries>
+                    <comboentry value="uc3a0512">
+                        <comboentrytext>AVR32UC3A0512</comboentrytext>
+                    </comboentry>
+                    <comboentry value="c128">
+                        <comboentrytext>AT90CAN128</comboentrytext>
+                    </comboentry>
+                    <comboentry value="c32">
+                        <comboentrytext>AT90CAN32</comboentrytext>
+                    </comboentry>
+                    <comboentry value="c64">
+                        <comboentrytext>AT90CAN64</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pwm2">
+                        <comboentrytext>AT90PWM2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pwm2b">
+                        <comboentrytext>AT90PWM2B</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pwm3">
+                        <comboentrytext>AT90PWM3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pwm316">
+                        <comboentrytext>AT90PWM316</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pwm3b">
+                        <comboentrytext>AT90PWM3B</comboentrytext>
+                    </comboentry>
+                    <comboentry value="1200">
+                        <comboentrytext>AT90S1200</comboentrytext>
+                    </comboentry>
+                    <comboentry value="2313">
+                        <comboentrytext>AT90S2313</comboentrytext>
+                    </comboentry>
+                    <comboentry value="2333">
+                        <comboentrytext>AT90S2333</comboentrytext>
+                    </comboentry>
+                    <comboentry value="2343">
+                        <comboentrytext>AT90S2343</comboentrytext>
+                    </comboentry>
+                    <comboentry value="4414">
+                        <comboentrytext>AT90S4414</comboentrytext>
+                    </comboentry>
+                    <comboentry value="4433">
+                        <comboentrytext>AT90S4433</comboentrytext>
+                    </comboentry>
+                    <comboentry value="4434">
+                        <comboentrytext>AT90S4434</comboentrytext>
+                    </comboentry>
+                    <comboentry value="8515">
+                        <comboentrytext>AT90S8515</comboentrytext>
+                    </comboentry>
+                    <comboentry value="8535">
+                        <comboentrytext>AT90S8535</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb1286">
+                        <comboentrytext>AT90USB1286</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb1287">
+                        <comboentrytext>AT90USB1287</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb162">
+                        <comboentrytext>AT90USB162</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb646">
+                        <comboentrytext>AT90USB646</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb647">
+                        <comboentrytext>AT90USB647</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usb82">
+                        <comboentrytext>AT90USB82</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m103">
+                        <comboentrytext>ATmega103</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m128">
+                        <comboentrytext>ATmega128</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m1280">
+                        <comboentrytext>ATmega1280</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m1281">
+                        <comboentrytext>ATmega1281</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m1284p">
+                        <comboentrytext>ATmega1284P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m1284rfr2">
+                        <comboentrytext>ATmega1284RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m128rfa1">
+                        <comboentrytext>ATmega128RFA1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m128rfr2">
+                        <comboentrytext>ATmega128RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m16">
+                        <comboentrytext>ATmega16</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m161">
+                        <comboentrytext>ATmega161</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m162">
+                        <comboentrytext>ATmega162</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m163">
+                        <comboentrytext>ATmega163</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m164p">
+                        <comboentrytext>ATmega164P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m168">
+                        <comboentrytext>ATmega168</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m168p">
+                        <comboentrytext>ATmega168P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m169">
+                        <comboentrytext>ATmega169</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m16u2">
+                        <comboentrytext>ATmega16U2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m2560">
+                        <comboentrytext>ATmega2560</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m2561">
+                        <comboentrytext>ATmega2561</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m2564rfr2">
+                        <comboentrytext>ATmega2564RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m256rfr2">
+                        <comboentrytext>ATmega256RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m32">
+                        <comboentrytext>ATmega32</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m324p">
+                        <comboentrytext>ATmega324P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m324pa">
+                        <comboentrytext>ATmega324PA</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m325">
+                        <comboentrytext>ATmega325</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m3250">
+                        <comboentrytext>ATmega3250</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m328">
+                        <comboentrytext>ATmega328</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m328p">
+                        <comboentrytext>ATmega328P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m329">
+                        <comboentrytext>ATmega329</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m3290">
+                        <comboentrytext>ATmega3290</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m3290p">
+                        <comboentrytext>ATmega3290P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m329p">
+                        <comboentrytext>ATmega329P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m32u2">
+                        <comboentrytext>ATmega32U2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m32u4">
+                        <comboentrytext>ATmega32U4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m406">
+                        <comboentrytext>ATMEGA406</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m48">
+                        <comboentrytext>ATmega48</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m48p">
+                        <comboentrytext>ATmega48P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m64">
+                        <comboentrytext>ATmega64</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m640">
+                        <comboentrytext>ATmega640</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m644">
+                        <comboentrytext>ATmega644</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m644p">
+                        <comboentrytext>ATmega644P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m644rfr2">
+                        <comboentrytext>ATmega644RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m645">
+                        <comboentrytext>ATmega645</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m6450">
+                        <comboentrytext>ATmega6450</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m649">
+                        <comboentrytext>ATmega649</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m6490">
+                        <comboentrytext>ATmega6490</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m64rfr2">
+                        <comboentrytext>ATmega64RFR2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m8">
+                        <comboentrytext>ATmega8</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m8515">
+                        <comboentrytext>ATmega8515</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m8535">
+                        <comboentrytext>ATmega8535</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m88">
+                        <comboentrytext>ATmega88</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m88p">
+                        <comboentrytext>ATmega88P</comboentrytext>
+                    </comboentry>
+                    <comboentry value="m8u2">
+                        <comboentrytext>ATmega8U2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t10">
+                        <comboentrytext>ATtiny10</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t11">
+                        <comboentrytext>ATtiny11</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t12">
+                        <comboentrytext>ATtiny12</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t13">
+                        <comboentrytext>ATtiny13</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t15">
+                        <comboentrytext>ATtiny15</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t1634">
+                        <comboentrytext>ATtiny1634</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t20">
+                        <comboentrytext>ATtiny20</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t2313">
+                        <comboentrytext>ATtiny2313</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t24">
+                        <comboentrytext>ATtiny24</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t25">
+                        <comboentrytext>ATtiny25</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t26">
+                        <comboentrytext>ATtiny26</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t261">
+                        <comboentrytext>ATtiny261</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t4">
+                        <comboentrytext>ATtiny4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t40">
+                        <comboentrytext>ATtiny40</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t4313">
+                        <comboentrytext>ATtiny4313</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t43u">
+                        <comboentrytext>ATtiny43u</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t44">
+                        <comboentrytext>ATtiny44</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t45">
+                        <comboentrytext>ATtiny45</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t461">
+                        <comboentrytext>ATtiny461</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t5">
+                        <comboentrytext>ATtiny5</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t84">
+                        <comboentrytext>ATtiny84</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t85">
+                        <comboentrytext>ATtiny85</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t861">
+                        <comboentrytext>ATtiny861</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t88">
+                        <comboentrytext>ATtiny88</comboentrytext>
+                    </comboentry>
+                    <comboentry value="t9">
+                        <comboentrytext>ATtiny9</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a1">
+                        <comboentrytext>ATxmega128A1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a1d">
+                        <comboentrytext>ATxmega128A1revD</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a1u">
+                        <comboentrytext>ATxmega128A1U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a3">
+                        <comboentrytext>ATxmega128A3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a3u">
+                        <comboentrytext>ATxmega128A3U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a4">
+                        <comboentrytext>ATxmega128A4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128a4u">
+                        <comboentrytext>ATxmega128A4U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128b1">
+                        <comboentrytext>ATxmega128B1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128b3">
+                        <comboentrytext>ATxmega128B3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128c3">
+                        <comboentrytext>ATxmega128C3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128d3">
+                        <comboentrytext>ATxmega128D3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x128d4">
+                        <comboentrytext>ATxmega128D4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x16a4">
+                        <comboentrytext>ATxmega16A4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x16a4u">
+                        <comboentrytext>ATxmega16A4U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x16c4">
+                        <comboentrytext>ATxmega16C4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x16d4">
+                        <comboentrytext>ATxmega16D4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x16e5">
+                        <comboentrytext>ATxmega16E5</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x192a1">
+                        <comboentrytext>ATxmega192A1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x192a3">
+                        <comboentrytext>ATxmega192A3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x192a3u">
+                        <comboentrytext>ATxmega192A3U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x192c3">
+                        <comboentrytext>ATxmega192C3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x192d3">
+                        <comboentrytext>ATxmega192D3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256a1">
+                        <comboentrytext>ATxmega256A1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256a3">
+                        <comboentrytext>ATxmega256A3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256a3b">
+                        <comboentrytext>ATxmega256A3B</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256a3bu">
+                        <comboentrytext>ATxmega256A3BU</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256a3u">
+                        <comboentrytext>ATxmega256A3U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256c3">
+                        <comboentrytext>ATxmega256C3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x256d3">
+                        <comboentrytext>ATxmega256D3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x32a4">
+                        <comboentrytext>ATxmega32A4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x32a4u">
+                        <comboentrytext>ATxmega32A4U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x32c4">
+                        <comboentrytext>ATxmega32C4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x32d4">
+                        <comboentrytext>ATxmega32D4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x32e5">
+                        <comboentrytext>ATxmega32E5</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x384c3">
+                        <comboentrytext>ATxmega384C3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x384d3">
+                        <comboentrytext>ATxmega384D3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a1">
+                        <comboentrytext>ATxmega64A1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a1u">
+                        <comboentrytext>ATxmega64A1U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a3">
+                        <comboentrytext>ATxmega64A3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a3u">
+                        <comboentrytext>ATxmega64A3U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a4">
+                        <comboentrytext>ATxmega64A4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64a4u">
+                        <comboentrytext>ATxmega64A4U</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64b1">
+                        <comboentrytext>ATxmega64B1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64b3">
+                        <comboentrytext>ATxmega64B3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64c3">
+                        <comboentrytext>ATxmega64C3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64d3">
+                        <comboentrytext>ATxmega64D3</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x64d4">
+                        <comboentrytext>ATxmega64D4</comboentrytext>
+                    </comboentry>
+                    <comboentry value="x8e5">
+                        <comboentrytext>ATxmega8E5</comboentrytext>
+                    </comboentry>
+                </comboentries>
+            </fieldcontrol>
+        </field>
+        <field name="FREQUENCY" mandatory="false">
+            <fielddescription xml:lang="en">Frequency (Hz):</fielddescription>
+            <fielddescription xml:lang="ru">Тактовая частота (Гц):</fielddescription>
+            <fielddescription xml:lang="cs">Frekvence (Hz):</fielddescription>
+            <fieldcontrol class="QLineEdit" validator='^[0-9]+$' defaulttext="1600000"/>
+        </field>
+        <field name="PROG" mandatory="false">
+            <fielddescription xml:lang="en">Programmer:</fielddescription>
+            <fielddescription xml:lang="ru">Программатор:</fielddescription>
+            <fielddescription xml:lang="cs">Programátor:</fielddescription>
+            <fieldcontrol class="QComboBox" defaultindex="0">
+                <comboentries>
+                    <comboentry value="2232HIO">
+                        <comboentrytext>2232HOI - FT2232D based generic programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="89isp">
+                        <comboentrytext>Atmel at89isp cable</comboentrytext>
+                    </comboentry>
+                    <comboentry value="abcmini">
+                        <comboentrytext>ABCmini Board aka Dick Smith HOTCHIP</comboentrytext>
+                    </comboentry>
+                    <comboentry value="alf">
+                        <comboentrytext>Nightshade ALF-PgmAVR</comboentrytext>
+                    </comboentry>
+                    <comboentry value="arduino">
+                        <comboentrytext xml:lang="en">Arduino programmer</comboentrytext>
+                        <comboentrytext xml:lang="ru">Программатор Arduino, протокол сходен с STK500 1.x</comboentrytext>
+                    </comboentry>
+                    <comboentry value="arduino-ft232r">
+                        <comboentrytext>Arduino: FT232R connected to ISP</comboentrytext>
+                    </comboentry>
+                    <comboentry value="atisp">
+                        <comboentrytext xml:lang="en">AT-ISP V1.1 programming cable for AVR-SDK1</comboentrytext>
+                        <comboentrytext xml:lang="ru">AT-ISP V1.1 кабель программирования для AVR-SDK1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="atmelice">
+                        <comboentrytext xml:lang="en">Atmel-ICE (ARM/AVR) in JTAG mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel-ICE (ARM/AVR) в режиме JTAG</comboentrytext>
+                    </comboentry>
+                    <comboentry value="atmelice_dw">
+                        <comboentrytext xml:lang="en">Atmel-ICE (ARM/AVR) in debugWIRE mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel-ICE (ARM/AVR) в режиме debugWIRE</comboentrytext>
+                    </comboentry>
+                    <comboentry value="atmelice_isp">
+                        <comboentrytext xml:lang="en">Atmel-ICE (ARM/AVR) in ISP mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel-ICE (ARM/AVR) в режиме ISP</comboentrytext>
+                    </comboentry>
+                    <comboentry value="atmelice_pdi">
+                        <comboentrytext xml:lang="en">Atmel-ICE (ARM/AVR) in PDI mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel-ICE (ARM/AVR) в режиме PDI</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avr109">
+                        <comboentrytext>Atmel AppNote AVR109 Boot Loader</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avr910">
+                        <comboentrytext>avr910 - Atmel Low Cost Serial Programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avr911">
+                        <comboentrytext>Atmel AppNote AVR911 AVROSP (alias for avr109)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avrftdi">
+                        <comboentrytext xml:lang="en">FT2232D based generic bitbang programmer</comboentrytext>
+                        <comboentrytext xml:lang="ru">FTDI MPSSE (FT2232 etc.) поддержка bitbang</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avrisp">
+                        <comboentrytext>Atmel AVR ISP (stk500)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avrisp2">
+                        <comboentrytext>Atmel AVR ISP mkII (stk500v2)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avrispmkII">
+                        <comboentrytext>Atmel AVR ISP mkII (stk500v2)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="avrispv2">
+                        <comboentrytext>Atmel AVR ISP, running a version 2.x firmware (stk500v2)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="bascom">
+                        <comboentrytext>Bascom SAMPLE programming cable</comboentrytext>
+                    </comboentry>
+                    <comboentry value="blaster">
+                        <comboentrytext>Altera ByteBlaster</comboentrytext>
+                    </comboentry>
+                    <comboentry value="bsd">
+                        <comboentrytext>Brian Dean's Programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="buspirate">
+                        <comboentrytext>The Bus Pirate</comboentrytext>
+                    </comboentry>
+                    <comboentry value="buspirate_bb">
+                        <comboentrytext>The Bus Pirate (bitbang interface, supports TPI)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="butterfly">
+                        <comboentrytext>Atmel Butterfly Development Board</comboentrytext>
+                    </comboentry>
+                    <comboentry value="bwmega">
+                        <comboentrytext>BitWizard ftdi_atmega builtin programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="C232HM">
+                        <comboentrytext>FT232H based module from FTDI and Glyn.com.au</comboentrytext>
+                    </comboentry>
+                    <comboentry value="c2n232i">
+                        <comboentrytext>C2N232I, reset=dtr sck=!rts mosi=!txd miso=!cts,</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dapa">
+                        <comboentrytext>dapa - Direct AVR Parallel Access cable</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dasa">
+                        <comboentrytext>dasa - serial port banging, reset=rts sck=dtr mosi=txd miso=cts</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dasa3">
+                        <comboentrytext>dasa3 - serial port banging, reset=!dtr sck=rts mosi=txd miso=cts</comboentrytext>
+                    </comboentry>
+                    <comboentry value="diecimila">
+                        <comboentrytext>diecimila (arduino-ft232r)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_dw">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in debugWire mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в режиме debugWire</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_hvsp">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in high-voltage serial programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в высоковольтном последовательном режиме</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_isp">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in ISP mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в режиме ISP</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_jtag">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in JTAG mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в режиме JTAG </comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_pdi">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in PDI mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в режиме PDI</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dragon_pp">
+                        <comboentrytext xml:lang="en">Atmel AVR Dragon in (high-voltage) parallel programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR Dragon в (высоковольном) параллельном режиме</comboentrytext>
+                    </comboentry>
+                    <comboentry value="dt006">
+                        <comboentrytext>Dontronics DT006</comboentrytext>
+                    </comboentry>
+                    <comboentry value="ere-isp-avr">
+                        <comboentrytext>ERE ISP-AVR</comboentrytext>
+                    </comboentry>
+                    <comboentry value="flip1">
+                        <comboentrytext>FLIP USB DFU protocol V1 (doc7618)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="flip2">
+                        <comboentrytext>FLIP USB DFU protocol V2 (AVR4023)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="frank-stk200">
+                        <comboentrytext xml:lang="en">STK200 clone from Frank'а</comboentrytext>
+                        <comboentrytext xml:lang="ru">Клон STK200 от Frank'а</comboentrytext>
+                    </comboentry>
+                    <comboentry value="ft232r">
+                        <comboentrytext>FT232R Synchronous BitBang</comboentrytext>
+                    </comboentry>
+                    <comboentry value="ft245r">
+                        <comboentrytext>FT245R Synchronous BitBang</comboentrytext>
+                    </comboentry>
+                    <comboentry value="futurlec">
+                        <comboentrytext xml:lang="en">Futurlec.com programming cable</comboentrytext>
+                        <comboentrytext xml:lang="ru">Кабель программирования Futurlec.com</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag1">
+                        <comboentrytext>alias for jtagmkI Atmel JTAG ICE mkI, running at 115200 Bd</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag1slow">
+                        <comboentrytext>alias for jtag1 Atmel JTAG ICE mkI, running at 19200 Bd</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2avr32">
+                        <comboentrytext>Atmel JTAG ICE mkII im AVR32 mode</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2slow">
+                        <comboentrytext>alias for jtagmkII Atmel JTAG ICE mkII (default speed 19200 Bd)</comboentrytext>
+                    </comboentry>
+                    <!--comboentry value="jtag2">
+                        <comboentrytext>alias for jtag2fast</comboentrytext>
+                    </comboentry-->
+                    <comboentry value="jtag3">
+                        <comboentrytext xml:lang="en">Atmel AVR JTAGICE3 in JTAG mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR JTAGICE3 В режиме JTAG</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag3dw">
+                        <comboentrytext xml:lang="en">Atmel AVR JTAGICE3 in debugWIRE mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR JTAGICE3 в режиме debugWIRE</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag3isp">
+                        <comboentrytext xml:lang="en">Atmel AVR JTAGICE3 in ISP mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR JTAGICE3 в режиме ISP</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag3pdi">
+                        <comboentrytext xml:lang="en">Atmel AVR JTAGICE3 in PDI mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR JTAGICE3 в режиме PDI</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2pdi">
+                        <comboentrytext xml:lang="en">Atmel JTAG ICE mkII in PDI mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel JTAG ICE mkII в режиме PDI</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2fast">
+                        <comboentrytext>Atmel JTAG ICE mkII, running at 115200 Bd</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2isp">
+                        <comboentrytext>Atmel JTAG ICE mkII in ISP mode.</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtag2dw">
+                        <comboentrytext>Atmel JTAG ICE mkII in debugWire mode.</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtagkey">
+                        <comboentrytext>Amontec JTAGKey, JTAGKey-Tiny and JTAGKey2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtagmkI">
+                        <comboentrytext>Atmel JTAG ICE mkI, running at 115200 Bd</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtagmkII">
+                        <comboentrytext>Atmel JTAG ICE mkII (default speed 19200 Bd)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="jtagmkII_avr32">
+                        <comboentrytext>Atmel JTAG ICE mkII im AVR32 mode</comboentrytext>
+                    </comboentry>
+                    <comboentry value="linuxgpio">
+                        <comboentrytext>Use the Linux sysfs interface to bitbang GPIO lines</comboentrytext>
+                    </comboentry>
+                    <comboentry value="lm3s811">
+                        <comboentrytext>Luminary Micro LM3S811 Eval Board (Rev. A)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="mib510">
+                        <comboentrytext>Crossbow MIB510 programming board</comboentrytext>
+                    </comboentry>
+                    <comboentry value="mkbutterfly">
+                        <comboentrytext>Mikrokopter.de Butterfly</comboentrytext>
+                    </comboentry>
+                    <!--comboentry value="butterfly_mk">
+                        <comboentrytext>alias for mkbutterfly</comboentrytext>
+                    </comboentry-->
+                    <comboentry value="nibobee">
+                        <comboentrytext>NIBObee</comboentrytext>
+                    </comboentry>
+                    <comboentry value="o-link">
+                        <comboentrytext>O-Link, OpenJTAG from 100ask.net</comboentrytext>
+                    </comboentry>
+                    <comboentry value="openmoko">
+                        <comboentrytext>Openmoko debug board (v3)</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pavr">
+                        <comboentrytext>Jason Kyle's pAVR Serial Programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="picoweb">
+                        <comboentrytext>Picoweb Programming Cable</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pickit2">
+                        <comboentrytext>MicroChip's PICkit2 Programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="pony-stk200">
+                        <comboentrytext>Pony Prog STK200</comboentrytext>
+                    </comboentry>
+                    <comboentry value="ponyser">
+                        <comboentrytext>design ponyprog serial, reset=!txd sck=rts mosi=dtr miso=cts</comboentrytext>
+                    </comboentry>
+                    <comboentry value="siprog">
+                        <comboentrytext>Lancos SI-Prog, http://www.lancos.com/siprogsch.html</comboentrytext>
+                    </comboentry>
+                    <comboentry value="sp12">
+                        <comboentrytext>Steve Bolt's Programmer</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk200">
+                        <comboentrytext>STK200</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk500">
+                        <comboentrytext>Atmel STK500, probing for either version 1.x or 2.x firmware</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk500hvsp">
+                        <comboentrytext xml:lang="en">Atmel STK500 V2 in high-voltage serial programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel STK500 V2 в режиме высоковольтного последовательного программирования</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk500pp">
+                        <comboentrytext xml:lang="en">Atmel STK500 V2 in parallel programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel STK500 V2 в режиме параллельного программирования</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk500v1">
+                        <comboentrytext>Atmel STK500 V1</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk500v2">
+                        <comboentrytext>Atmel STK500 V2</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk600">
+                        <comboentrytext>Atmel STK600 в режиме ISP или в PDI режиме для устройств ATxmega</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk600hvsp">
+                        <comboentrytext xml:lang="en">Atmel STK600 in parallel programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel STK600 в режиме высоковольтного последовательного программирования</comboentrytext>
+                    </comboentry>
+                    <comboentry value="stk600pp">
+                        <comboentrytext xml:lang="en">Atmel STK600 in parallel programming mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel STK600 в режиме параллельного программирования</comboentrytext>
+                    </comboentry>
+                    <comboentry value="ttl232r">
+                        <comboentrytext>FTDI TTL232R-5V with ICSP adapter</comboentrytext>
+                    </comboentry>
+                    <comboentry value="tumpa">
+                        <comboentrytext>TIAO USB Multi-Protocol Adapter</comboentrytext>
+                    </comboentry>
+                    <comboentry value="UM232H">
+                        <comboentrytext>FT232H based module from FTDI and Glyn.com.au</comboentrytext>
+                    </comboentry>
+                    <comboentry value="uncompatino">
+                        <comboentrytext>uncompatino with all pairs of pins shorted</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usbasp">
+                        <comboentrytext>USBasp</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usbasp-clone">
+                        <comboentrytext>Any usbasp clone with correct VID/PID</comboentrytext>
+                    </comboentry>
+                    <comboentry value="usbtiny">
+                        <comboentrytext xml:lang="en">USBtiny - simple USB programmer</comboentrytext>
+                        <comboentrytext xml:lang="ru">USBtiny - простой USB программатор</comboentrytext>
+                    </comboentry>
+                    <comboentry value="wiring">
+                        <comboentrytext>wiring - Basically STK500v2 protocol, with some glue to trigger the bootloader</comboentrytext>
+                    </comboentry>
+                    <comboentry value="xil">
+                        <comboentrytext xml:lang="en">Xilinx JTAG cable</comboentrytext>
+                        <comboentrytext xml:lang="ru">Xilinx JTAG кабель</comboentrytext>
+                    </comboentry>
+                    <comboentry value="xplainedpro">
+                        <comboentrytext xml:lang="en">Atmel AVR XplainedPro in JTAG mode</comboentrytext>
+                        <comboentrytext xml:lang="ru">Atmel AVR XplainedPro в режиме JTAG</comboentrytext>
+                    </comboentry>
+                </comboentries>
+            </fieldcontrol>
+        </field>
+        <field name="PROGPORT" mandatory="false">
+            <fieldcontrol class="Utils::PathChooser" defaulttext="/dev/ttyUSB0" expectedkind="any"/>
+            <fielddescription xml:lang="en">Programmer port:</fielddescription>
+            <fielddescription xml:lang="ru">Порт программатора:</fielddescription>
+            <fielddescription xml:lang="cs">Port, na němž je programátor:</fielddescription>
+        </field>
+        <field name="UPLOAD_BAUDRATE" mandatory="false">
+            <fieldcontrol class="QLineEdit" validator='^[0-9]+$' defaulttext="115200" placeholdertext=""/>
+            <fielddescription>Programmer Upload Baudrate:</fielddescription>
+            <fielddescription xml:lang="ru">Бодрейт программатора:</fielddescription>
+            <fielddescription xml:lang="cs"></fielddescription>
+        </field>
+        <field name="UPLOAD_OPTIONS" mandatory="false">
+            <fieldcontrol class="QLineEdit" validator='^[a-z0-9]+$' defaulttext="" placeholdertext="Upload options"/>
+            <fielddescription>Upload options:</fielddescription>
+            <fielddescription xml:lang="ru">Опции прошивки:</fielddescription>
+        </field>
+    </fields>
+</wizard>
+
