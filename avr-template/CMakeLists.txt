@@ -28,6 +28,7 @@ set(AVR_UPLOADTOOL_PORT %PROGPORT%)
 set(AVR_PROGRAMMER %PROG%)
 set(AVR_UPLOAD_BAUDRATE %UPLOAD_BAUDRATE%)
 set(AVR_UPLOADTOOL_OPTIONS %UPLOAD_OPTIONS%)
+
 set(WITH_MCU OFF)
 set(WITH_MCU OFF CACHE BOOL "Add the mCU type to the target file name." FORCE)
 
@@ -39,6 +40,11 @@ set(AVR_H_FUSE "")
 set(AVR_L_FUSE "")
 set(AVR_E_FUSE "")
 
+##################################################################################
+# needs to be defined for AVR toolchain
+##################################################################################
+set(AVR_MCU_SPEED "%FREQUENCY%UL")
+
 ### END TOOLCHAIN SETUP AREA #####################################################
 
 find_package(Generic-AVR-GCC)
@@ -48,11 +54,6 @@ find_package(Generic-AVR-GCC)
 ##################################################################################
 project(EXAMPLE)
 set(CMAKE_BUILD_TYPE Release)
-
-##################################################################################
-# needs to be defined for AVR toolchain
-##################################################################################
-set(AVR_MCU_SPEED "%FREQUENCY%UL")
 
 ##################################################################################
 # set command line arguments for compiler
@@ -82,10 +83,10 @@ add_avr_executable(
 ##################################################################################
 # add AVR library
 ##################################################################################
-add_avr_library(
-   <library-name>
-   <sources> <headers>
-)
+#add_avr_library(
+#   <library-name>
+#   <sources> <headers>
+#)
 
 ##################################################################################
 # link library to executable

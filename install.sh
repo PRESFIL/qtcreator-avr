@@ -26,7 +26,7 @@ sudo apt-get install gdb-avr
 sudo apt-get install avrdude
 
 # installing template
-cp -f cmake-avr/CMakeLists.txt CMakeLists.txt
-cp -f -r avr-template /opt/Qt/Tools/QtCreator/share/qtcreator/templates/wizards/cmake
+# cp -f cmake-avr/CMakeLists.txt CMakeLists.txt
+cp -f -r avr-template /opt/Qt/Tools/QtCreator/share/qtcreator/templates/wizards
 
 echo "Done"
